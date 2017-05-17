@@ -1,6 +1,6 @@
 
 var dashboard = angular.module('dashboardapp',['nvd3']);
-dashboard.controller('dashboard', function($scope, $http) {
+dashboard.controller('dashboard', function($scope, $http, $window) {
 
     $scope.getNodes = function(){
         $http({
@@ -46,6 +46,7 @@ dashboard.controller('dashboard', function($scope, $http) {
                 "services": services
             }
         }).success(function (data) {
+            $window.alert('Node Added Successfully');
             console.log(data);
 
         })
@@ -63,6 +64,7 @@ dashboard.controller('dashboard', function($scope, $http) {
                 "services": services
             }
         }).success(function (data) {
+            $window.alert('Cluster Added Successfully');
             console.log(data);
 
         })
@@ -80,6 +82,7 @@ dashboard.controller('dashboard', function($scope, $http) {
                 "node": node
             }
         }).success(function (data) {
+            $window.alert('Service Added Successfully');
             console.log(data);
 
         })
@@ -99,7 +102,7 @@ dashboard.controller('dashboard', function($scope, $http) {
                         text: 'Services'
                     },
                     //categories: ["33 South", "101 San Fernando", "Pascio Plaza", "355 Serrano Drive", "Casa Baloni", "The Weekend", "Holiday Inn", "Radisson Blu", "Legacy Fountain"]
-                    categories: ["Printing", "Lab Access", "Library", "PC Access", "Projector Access", "IEEE Subscription", "International Student Service", "Practical Service", "Dining Service", "Learning Material Service"]
+                    categories: ["Calorie Count", "Book Search", "Engineering Info", "Event Schedule", "Public Chat", "IEEE Subscription", "International Student Service", "Practical Service", "Dining Service", "Learning Material Service"]
                 },
 
                 series: [{
@@ -174,18 +177,18 @@ dashboard.controller('dashboard', function($scope, $http) {
                 title: {
                     text: 'Clusters'
                 },
-                categories: ["Library", "Software Engineering", "Aerospace Engineering", "Nuclear Engineering,", "Student Union"]
+                categories: ["San Jose State University", "Santa Clara University", "SJPD", "Civic Center", "Health Department"]
                 //categories: ["Adrian Brady", "Juan Pinzon", "Rakesh Shah", "Xiaoyu Zhou", "Chris Pratt", "Juliann Moore", "Steve Austin", "Salmaan Pelhari", "Stacy Roberts"]
             },
 
             series: [{
                 type: 'column',
                 colorByPoint: true,
-                data: [15,
-                    7,
+                data: [84,
+                    50,
                     40,
-                    71,
-                    92],
+                    22,
+                    34],
                 //  data: [2334, 5434, 2123, 1232, 10394, 3942, 5678, 11234, 4530],
                 showInLegend: false
             }]
