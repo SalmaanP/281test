@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.5/angular-nvd3.min.js"></script>
+
+
+    <title>CSNet | Admin</title>
+    <link href="css/css/bootstrap.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/css1.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/prettify.css" rel="stylesheet">
+    <link href="css/blue.css" rel="stylesheet">
+    <link href="css/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/fullcalendar.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="css/dataTables.fontAwesome.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <script src="angularjs/dashboard.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script>
+
+    </script>
+</head>
+<body ng-app="dashboardapp" ng-controller="dashboard"
+     ng-init=>
+
+<header id="topnav"
+        class="navbar navbar-midnightblue navbar-fixed-top clearfix"
+        role="banner">
+
+		<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg"> <a
+                    data-toggle="tooltips" data-placement="right" title="Toggle Sidebar"><span
+                        class="icon-bg"><i class="fa fa-fw fa-bars"></i> </span> </a>
+		</span>
+    <a href="" style="font-size:18px;color:#ffffff;float: left;height:50px;padding:15px;line-height:20px;">CSNet Dashboard</a>
+    <ul class="nav navbar-nav toolbar pull-right">
+
+
+        <li class="dropdown toolbar-icon-bgs">
+
+        </li>
+
+
+        <li><a href="/admin_logout"><span class="pull-left">Sign Out</span></a></li>
+
+    </ul>
+
+</header>
+
+<div id="wrapper">
+    <div id="layout-static">
+        <div class="static-sidebar-wrapper sidebar-midnightblue">
+            <div class="static-sidebar">
+                <div class="sidebar">
+                    <div class="widget stay-on-collapse" id="widget-welcomebox">
+                        <div class="widget-body welcome-box tabular">
+                            <div class="tabular-row">
+                                <div class="tabular-cell welcome-avatar">
+                                    <a href="/admin_dashboard"><img src="images/admin.jpg" class="avatar"></a>
+                                </div>
+                                <div class="tabular-cell welcome-options">
+                                    <span class="welcome-text">Welcome,</span>
+                                    <a href="/admin_dashboard" class="name">Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget stay-on-collapse" id="widget-sidebar">
+                        <nav role="navigation" class="widget-body">
+                            <ul class="acc-menu">
+                                <li class="nav-separator"></li>
+
+
+                                <li><a href="/admin_dashboard"><span><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp; Dashboard</span></a>
+                                </li>
+                                <li><a href="/admin_activeUserManagement"><span><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Cluster Management</span></a>
+                                </li>
+
+                                <!--<li><a href="javascript:void(0);"><i-->
+                                <!--class="fa fa-users"></i><span>Host Management</span></a>-->
+                                <!--<ul class="acc-menu">-->
+                                <li>
+                                    <a href="/admin_activeHostManagement"><span><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Node Management</span></a>
+                                </li>
+
+
+                                <li>
+                                    <a href="/admin_activePropertyManagement"><span><i class="fa fa-bank" aria-hidden="true"></i>&nbsp; Service Management</span></a>
+
+                                </li>
+
+                                <!--<li><a href="javascript:void(0);"><i-->
+                                <!--class="fa fa-user"></i><span>Admin Management</span></a>-->
+                                <!--<ul class="acc-menu">-->
+                                <li class="active"><a href="/addCluster"><span><i class="fa fa-asterisk" aria-hidden="true"></i>&nbsp; Add New Cluster</span></a></li>
+                                <li><a href="/addNode"><span><i class="fa fa-circle-thin" aria-hidden="true"></i>&nbsp; Add New Node</span></a></li>
+                                <li><a href="/addService"><span><i class="fa fa-credit-card" aria-hidden="true"></i>&nbsp; Add New Service</span></a></li>
+                                <!--</ul>-->
+                                <!--</li>-->
+
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="static-content-wrapper">
+            <div class="static-content">
+                <div class="page-content">
+                    <br>
+
+
+                    <img src="images/smart.jpg" align="center" height="50" width="180" class="center-block">
+                    <br><br>
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+
+                        <!--<div class="logincontain" style="">-->
+                        <div class="headercont" align="center"><b>Add New Cluster</b></div>
+                        <div class="bodycont">
+                            <form id="login-form" method="post" role="form" ng-submit="addAdmin()">
+
+                                <p><input type="text" class="txtbox" placeholder="Cluster ID" ng-model="id"></p>
+
+                                <p><input type="text" class="txtbox" placeholder="Name" ng-model="name"></p>
+
+
+
+                                <p><input type="text" class="txtbox" placeholder="Number of Instances" ng-model="nodes"></p>
+                                <p><input type="text" class="txtbox" placeholder="Number of Services" ng-model="services"></p>
+
+
+
+                                <div class="form-group col-md-6">
+                                    <button ng-click="postCluster(id, name, nodes, services)" type="submit" class="btn-login" name="login-button">Add Cluster</button>
+
+
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <button type="button" class="btn-login btn-info" onclick="window.location.href='/admin_dashboard'">Back</button>
+                                </div>
+                                <div class="form-group">
+                                    <br>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+
+                </div>
+                <footer role="contentinfo">
+                    <div class="clearfix">
+                        <ul class="list-unstyled list-inline pull-left">
+                            <li><h6 style="margin: 0;"></h6></li>
+                        </ul>
+                        <button class="pull-right btn btn-link btn-xs hidden-print"
+                                id="back-to-top">
+                            <i class="fa fa-arrow-up"></i>
+                        </button>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/yii.js"></script>
+</body>
+</html>
+
+<!--script type="text/javascript" src="/admin/js/jquery-1.10.2.min.js"></script-->
+<script type="text/javascript" src="js/jqueryui-1.9.2.min.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.easypiechart.js"></script>
+<script type="text/javascript" src="js/jquery.sparklines.min.js"></script>
+<script type="text/javascript" src="js/jstree.min.js"></script>
+<script type="text/javascript" src="js/prettify.js"></script>
+<script type="text/javascript" src="js/bootstrap-switch.js"></script>
+<script type="text/javascript" src="js/bootstrap-tabdrop.js"></script>
+<script type="text/javascript" src="js/icheck.min.js"></script>
+<script type="text/javascript" src="js/enquire.min.js"></script>
+<script type="text/javascript" src="js/bootbox.js"></script>
+<script type="text/javascript" src="js/jquery.simpleWeather.min.js"></script>
+<script type="text/javascript" src="js/jquery.nanoscroller.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="js/application.js"></script>
+<script type="text/javascript" src="js/demo.js"></script>
+<script type="text/javascript" src="js/demo-switcher.js"></script>
+<script type="text/javascript" src="js/fullcalendar.min.js"></script>
+<script type="text/javascript" src="js/wijets.js"></script>
+<script type="text/javascript" src="js/chartist.min.js"></script>
+<script type="text/javascript" src="js/chartist-plugin-tooltip.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/daterangepicker.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="js/demo-datatables.js"></script>
+<script type="text/javascript" src="js/fileinput.min.js"></script>
+<script type="text/javascript" src="js/ckeditor.js"></script>
+<style type="text/css">
+    .alert-success {
+        /*position: absolute;*/
+        right: -50%;
+        width: 100%;
+        transition: all 0.5s !important;
+        overflow: hidden !important;
+    }
+
+    .flashcss {
+        right: 0%;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        setTimeout(function () {
+            $(".alert-success").css("display", "none");
+        }, 3000);
+        $("#closebutton").click(function () {
+            $(".alert-success").css("display", "none");
+        });
+    });
+</script>
+<script type="text/javascript">
+    function onchangelang() {
+        $("#languagechange").submit();
+    }
+</script>
+
+
+
+<html>
+<title>Add Admin</title>
+<script type="text/javascript" src="../js/admin.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+<script src="angularjs/adminManagement.js"></script>
+<body class="bg_gray1" style="background:#f8f8f8;" ng-app="adminManagement" ng-controller="admin">
+<script type="text/javascript">
+    function scheme(){
+        alert("Cluster Created Successfully!");
+        window.location("/admin_dashboard");
+
+    }
+</script>
+</div>
+</body>
+</html>
+
+<style type="text/css">
+    .logincontain {
+        border-radius: 4px;
+        width: 33%;
+        margin: 100px auto;
+        border: 1px solid #ddd;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .headercont {
+        background: #f3f3f3;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .bodycont {
+        background: #ffffff;
+        padding: 15px;
+    }
+
+    .txtbox {
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        color: #555;
+        display: block;
+        font-size: 14px;
+        height: 34px;
+        line-height: 1.42857;
+        padding: 6px 12px;
+        transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+        width: 100%;
+    }
+
+    .btn-login {
+        background-color: #ff5a5f;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 14px !important;
+        font-weight: bold !important;
+        -moz-user-select: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        text-align: center;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+</style>
