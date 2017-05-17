@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="178bd832-b391-4d73-84a8-3d4e5a00fc1b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/add_cluster.ejs" afterPath="$PROJECT_DIR$/views/add_cluster.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/add_node.ejs" afterPath="$PROJECT_DIR$/views/add_node.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/add_service.ejs" afterPath="$PROJECT_DIR$/views/add_service.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin_activeHostManagement.ejs" afterPath="$PROJECT_DIR$/views/admin_activeHostManagement.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin_activePropertyManagement.ejs" afterPath="$PROJECT_DIR$/views/admin_activePropertyManagement.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin_activeUserManagement.ejs" afterPath="$PROJECT_DIR$/views/admin_activeUserManagement.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin_dashboard.ejs" afterPath="$PROJECT_DIR$/views/admin_dashboard.ejs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -111,11 +105,21 @@
       <file leaf-file-name="admin_dashboard.ejs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admin_dashboard.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="120" column="37" lean-forward="false" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
+            <state relative-caret-position="17">
+              <caret line="170" column="67" lean-forward="false" selection-start-line="170" selection-start-column="67" selection-end-line="170" selection-end-column="67" />
               <folding>
                 <element signature="e#6365#6371#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/angularjs/dashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -335,12 +339,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494985333489</updated>
-      <workItem from="1494985334896" duration="1847000" />
+      <workItem from="1494985334896" duration="2122000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1847000" />
+    <option name="totallyTimeSpent" value="2122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
@@ -376,14 +380,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/angularjs/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="188" column="22" lean-forward="false" selection-start-line="188" selection-start-column="22" selection-end-line="188" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/add_admin.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -460,10 +456,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/angularjs/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin_dashboard.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="120" column="37" lean-forward="false" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
+        <state relative-caret-position="17">
+          <caret line="170" column="67" lean-forward="false" selection-start-line="170" selection-start-column="67" selection-end-line="170" selection-end-column="67" />
           <folding>
             <element signature="e#6365#6371#0#HTML" expanded="true" />
           </folding>
